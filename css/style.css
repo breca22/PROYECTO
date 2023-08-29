@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body {
+        font-family: 'Raleway';
+        background-color:rgb(247, 236, 223) ;
+    }
+    .title {
+        padding-bottom: 10px;
+        margin-left: 15px;
+    }
+    header {
+        width: 100%;
+        height: 600px;
+        background: linear-gradient(to right, hsla(283, 67%, 71%, 0), hsla(14, 63%, 64%, 0)), url(../img/portada.jpg);
+        background-size: contain;
+        background-attachment: fixed;
+        position: relative;
+    }
+    nav {
+        text-align:center;
+    }
+   nav > a{
+    color: antiquewhite;
+    font-weight: 900;
+    text-decoration: none;
+    margin-right: 10px;
+   }
+
+   nav > a:hover{
+    background-color: antiquewhite;
+    color:#D3AE7F
+    
+}
+header .header-title{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.header-title h1{
+    font-size: 80px;
+    font-weight: 500;
+    -webkit-text-stroke: 2px #D3AE7F;
+    color: #FFFFF4;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+
+}
+.header-title h2{
+    font-size: 30px;
+    font-weight: 900;
+    color:rgb(247, 236, 223);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MAIN */
+main .about-us{
+padding: 30px 0 60px 0;
+}
+
+.container-about-us{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    flex-direction: column;
+}  
+
+.image-about-us{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+ .title {
+    margin-top: -35px;
+}
+
+.text-contect {
+    display: flex;
+    width: 100%;
+}
+.text-contect h3 {
+    margin-bottom: 9px;
+    margin-left: 15px;
+    color: #D3AE7F;
+}
+
+.text-contect p {
+padding: 0px 0px 30px 15px;
+font-weight: 300;
+text-align:left;
+}
+
+.prueba {
+    margin-left: 30px;
+    margin-right: 15px;
+    justify-content: space-evenly;
+    line-height: 25px;
+    list-style-type: circle; 
+}
+
+.prueba-1{
+    margin-left: 30px;
+    margin-right: 15px;
+    justify-content: space-evenly;
+    line-height: 20px;
+}
+
+.texto{
+    margin-left: 15px;
+}
+
+/* gallery */
+.portfolio {
+ margin-top: 30px;
+}
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.image-port {
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5); 
+}
+.image-port > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0);
+    background:#d3af7f81 ;
+    transition: transform .5s;
+}
+.hover-image img {
+    width: 50px;
+}
+.hover-image p {
+    color: rgb(214, 203, 203);
+    font-weight: 600;
+} 
+.image-port:hover .hover-image {
+    transform: scale(7);
+}
+
+
+/* SERVICIOS */
+.about-services{
+    background: #D3AE7F;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.frase-final {
+   text-align: center;
+}
+
+
+/* PIE DE PAGINA */
+footer {
+    background-color: #E5D1BA;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.container-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #4b3029;
+}
+.content-footer {
+    text-align: center;
+}
+.content-footer h4 {
+    color: #000000;
+    border-bottom: 3px solid #4b3029;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-footer p {
+    color: #000000;
+}
+.title-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #442828e1;
+}
+
+/*MEIAS QUERIES*/
+@media screen and (max-width: 500px) {    
+    nav {
+        text-align: center;
+       padding-top: 20px;
+    }
+
+    nav > a {
+        margin-right: 5px;
+    }
+
+    .header-title h1 {
+        font-size: 35px;
+    }
+
+    .header-title h2 {
+        font-size: 20px;
+    }
+
+    .container-about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-about-us {
+        width: 20%;
+        margin-bottom: 60px;
+    }
+
+    .about-us .text-content {
+        width: 80%;
+    }
+
+    .about-us h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text-content h3 {
+        font-size: 15px;
+    }
+
+    .text-content p {
+        font-size: 12px;
+    }
+
+    .text-content h3 span {
+        background-color: blueviolet;
+        color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        margin-right: 5px;
+        box-shadow:  0 0 6px 0 rgba(0,0,0,0.5);
+        font-size: 10px;
+    }
+
+    /* galeria */
+
+    .container {
+        align-items: center;
+    }
+
+    .gallery {
+        display: flex;
+    }
+
+    .image-port {
+        width: 90%;
+    }
+
+    .portfolio h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* clientes */
+
+    .cards .card {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-text-container h4 {
+        font-size: 14px;
+    }
+
+    .card-text-container p {
+        font-size: 12px;
+    }
+
+    /* servicios */
+    .about-services h2{
+    text-align: center;
+    }
+    
+    .service-cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-ind {
+        width: 90%;
+    }
+
+    /* pie de pagina */
+
+    .container-footer {
+        flex-direction: column;
+        border: none;
+        width: 90%;
+        align-items: center;
+        margin-top: -20px;
+    }
+
+    .content-footer {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-footer h4 {
+        font-size: 14px;
+        border-bottom: none;
+    }
+    .content-footer p {
+        font-size: 12px;
+    }
+
+    .title-final {
+        margin-top: -50px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 770px) {
+    .cards .card {
+        height: 300px;
+    }
+    .card-text-container {
+        font-size: 13px;
+    }
+}
